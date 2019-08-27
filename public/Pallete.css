@@ -1,0 +1,19 @@
+
+
+
+
+.ac-label{
+    display: inline-block;
+    width: 50%;
+}
+.ac-input{
+    display: inline-block;
+
+}
+
+.addPropety{
+    position: relative;
+    top:10px;
+    left:20px
+}
+

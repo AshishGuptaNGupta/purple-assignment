@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import Admin from './components/Admin';
+import GridLayout from './components/GridLayout';
+import Pagination from './components/Pagination';
+import Filters from './components/Filters';
+import * as product_action from './actions/product_action';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+   
+    constructor(props){
+        super(props);
+        this.state={
+            offset:0,
+        };
+        this.callbackFunction=this.callbackFunction.bind(this);
+       
+    }
+   
+    callbackFunction(offset){
+        console.log(offset);
+        this.setState({offset});
+    }
+    
+    render(){
+        
+        return(
+            <div>
+
+                <Filters sortProducts={this.props.sortProducts} />
+                <GridLayout gridSize={this.props.gridSize} products={this.props.products} offset={this.state.offset}/>
+                <Pagination gridSize={this.props.gridSize} products={this.props.products} changePage={this.callbackFunction}/>
+                
+            </div>
+        );
+    }
+        
+    
 }
 
-export default App;
+function mapStateToProps(state){
+    return{
+        gridSize:state.grid,
+        products:state.products
+    }
+}
+
+function mapDispatchToProps(dispatch){
+    return bindActionCreators(product_action,dispatch);
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);

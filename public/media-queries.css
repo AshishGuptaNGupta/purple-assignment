@@ -1,0 +1,41 @@
+
+/* small phones */
+@media only screen and (max-width:480px){
+   
+}
+
+@media only screen and (max-width:767px){
+    body{
+        font-size: 16px;
+    }
+    
+    .col{width:100%}
+
+    .grey-box{
+        width: 100%;
+    }
+    .modal{
+        width:100%;
+        margin:20px 20px;
+        padding:20px;
+       
+    }
+    
+    .addPropety{
+        position: static;     
+    }
+    
+    
+}
+@media only screen and (max-width:1023px){
+    body{
+        font-size:18px}
+    }
+
+
+   
+
+}
+@media only screen and (max-width:1200px){
+    .row{padding:0 2%}
+}

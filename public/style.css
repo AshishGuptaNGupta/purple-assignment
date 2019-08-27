@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+
+/* red- #e74c3c */
+/* yellow- #f1c40f */
+html,body{
+
+    font-family: Roboto,Arial, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.clearfix{
+    zoom: 1;
+}
+
+.clearfix:after{
+    content:".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.block{
+    display: block;
+}
+/* admin */
+.grey-box{
+    background-color: rgba(0, 0, 0, 0.048);
+    margin:auto;
+    
+    
+    
+}
+
+input{
+    display: block;
+    margin:5px auto;
+}
+
+.btn{
+    padding: 3px 10px;
+    color:white;
+    font-weight: 500;
+    margin:10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: box-shadow 0.2s;
+    border: 0
+}
+
+.btn-circle{
+    border-radius: 50%;
+}
+.btn-full{
+    background-color: #e74d3c;
+}
+.btn-full:hover{
+    box-shadow:0 0 0 1px #e74d3c;
+}
+
+.btn-full--yellow{
+    background-color: #f1c40f;
+    
+}
+.btn-full--yellow:hover{
+    box-shadow:0 0 0 1px #f1c40f;
+}
+
+.dropdown{
+    position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  
+.dropdown-content a:hover {background-color: #ddd;border-radius: 4px}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+    
+.tooltip {
+    position: relative;
+    display: inline-block;
+    
+  }
+  
+
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.678);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size:70%;
+  
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+
+   
+
+/* add product */
+.newProduct-form{
+    width:600px;
+
+    margin:20px auto;
+}
+
+.newProduct-form label{
+    position: relative;
+    top:12px;
+}
+
+/* admin */
+.admin .row:first-of-type{
+    margin: 0 auto;
+}
